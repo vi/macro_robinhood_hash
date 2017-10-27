@@ -13,6 +13,6 @@ Don't shrink this hash table by sequentially iterating it and inserting elements
 
 ## How to use
 
-* Design the table, so each cell can be easily checked for emptiness, keys stored inside cells somehow and preferred bucket number (i.e. hash) is easily gettable from a key (or even stored inside). One value should be designated to mean empty cell.
+* Design the table, so each cell can be easily checked for emptiness, keys stored inside cells somehow and preferred bucket number (i.e. hash) is easily gettable from a key (or even stored inside). One value should be designated to mean empty cell. Zeroeth bucket is also reserved for newly incoming entries and is never preferred.
 * Implement elementrary functions for getting keys and/or values, checking for emptiness, swapping two cell contents and so on using C macros prefixed with some your prefix
 * Use ROBINHOOD_HASH_* macros, specifying that prefix. "u" is just argument for all your macros.
