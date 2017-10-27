@@ -25,7 +25,7 @@ struct entry hshtable [100];
 #define qqq_keysequal(u,key1,key2) key1 == key2
 #define qqq_isnil(u,index)       u[index].key == -1
 #define qqq_n_elem(u)            (sizeof(u)/sizeof(*u))
-#define qqq_getbucket(u,key)     key%99 + 1
+#define qqq_getbucket(u,key)     key%((sizeof(u)/sizeof(*u)) - 1) + 1
 #define qqq_overflow(u)          {}
 #define qqq_removefailed(u,key)  {}
 
