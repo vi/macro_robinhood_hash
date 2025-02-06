@@ -69,7 +69,7 @@
         if (tbl##_isnil(u, _rh_i)) { \
             printf("___+__ "); \
         } else { \
-            printf("%03u+%02d ", tbl##_getkey(u,_rh_i), tbl##_getbucket(u,tbl##_getkey(u,i))); \
+            printf("%03u+%02d ", tbl##_getkey(u,_rh_i), tbl##_getbucket(u,tbl##_getkey(u,_rh_i))); \
         } \
     } \
     printf("\n"); \
